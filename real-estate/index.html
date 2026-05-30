@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prestige Properties - Your trusted real estate agency. Find luxury homes, apartments, and commercial properties with expert guidance.">
+    <meta name="keywords" content="real estate, properties, luxury homes, apartments, real estate agency">
+    <title>Prestige Properties | Luxury Real Estate Agency</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ==================== PRELOADER ==================== -->
+    <div class="preloader" id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo">PP</div>
+            <div class="loader-bar">
+                <div class="loader-bar-fill"></div>
+            </div>
+            <p class="loader-text">Loading...</p>
+        </div>
+    </div>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">
+                    <i class="fas fa-building"></i>
+                </span>
+                <span class="logo-text">Prestige<span class="logo-accent">Properties</span></span>
+            </a>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="properties.html" class="nav-link">Properties</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="agents.html" class="nav-link">Agents</a>
+                </li>
+                <li class="nav-item">
+                    <a href="testimonials.html" class="nav-link">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item nav-cta-mobile">
+                    <a href="contact.html" class="btn btn-primary btn-small">Get Started</a>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary nav-cta">Get Started</a>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="home">
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-badge reveal-text">
+                    <i class="fas fa-star"></i> Premier Real Estate Agency
+                </span>
+                <h1 class="hero-title reveal-text">
+                    Find Your Dream<br>
+                    <span class="gradient-text">Perfect Home</span>
+                </h1>
+                <p class="hero-description reveal-text">
+                    From luxury estates to modern apartments, we help you find the perfect property that matches your lifestyle and aspirations.
+                </p>
+                <div class="hero-actions reveal-text">
+                    <a href="properties.html" class="btn btn-primary btn-large">
+                        Explore Properties <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="about.html" class="btn btn-outline btn-large">
+                        <i class="fas fa-play-circle"></i> Learn More
+                    </a>
+                </div>
+                <div class="hero-stats reveal-text">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number" data-count="1500">0</span>
+                        <span class="hero-stat-plus">+</span>
+                        <span class="hero-stat-label">Properties Sold</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number" data-count="98">0</span>
+                        <span class="hero-stat-percent">%</span>
+                        <span class="hero-stat-label">Client Satisfaction</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number" data-count="25">0</span>
+                        <span class="hero-stat-plus">+</span>
+                        <span class="hero-stat-label">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image reveal-image">
+                <div class="hero-image-wrapper">
+                    <div class="hero-img-placeholder">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="hero-image-card card-1">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Trusted</span>
+                    </div>
+                    <div class="hero-image-card card-2">
+                        <i class="fas fa-bolt"></i>
+                        <span>Fast</span>
+                    </div>
+                    <div class="hero-image-card card-3">
+                        <i class="fas fa-gem"></i>
+                        <span>Premium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ==================== SEARCH SECTION ==================== -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-wrapper reveal-element">
+                <div class="search-header">
+                    <i class="fas fa-search"></i>
+                    <h3>Find Your Perfect Property</h3>
+                </div>
+                <form class="search-form" id="searchForm" onsubmit="event.preventDefault(); window.location.href='properties.html';">
+                    <div class="search-group">
+                        <label for="location"><i class="fas fa-map-marker-alt"></i></label>
+                        <input type="text" id="location" placeholder="Location, City or ZIP">
+                    </div>
+                    <div class="search-group">
+                        <label for="type"><i class="fas fa-home"></i></label>
+                        <select id="type">
+                            <option value="">Property Type</option>
+                            <option value="house">House</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="condo">Condo</option>
+                            <option value="villa">Villa</option>
+                            <option value="commercial">Commercial</option>
+                        </select>
+                    </div>
+                    <div class="search-group">
+                        <label for="min-price"><i class="fas fa-tag"></i></label>
+                        <select id="min-price">
+                            <option value="">Min Price</option>
+                            <option value="100000">$100,000</option>
+                            <option value="200000">$200,000</option>
+                            <option value="500000">$500,000</option>
+                            <option value="1000000">$1,000,000</option>
+                            <option value="2000000">$2,000,000+</option>
+                        </select>
+                    </div>
+                    <div class="search-group">
+                        <label for="bedrooms"><i class="fas fa-bed"></i></label>
+                        <select id="bedrooms">
+                            <option value="">Bedrooms</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5+</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-search">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA SECTION ==================== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-wrapper reveal-element">
+                <div class="cta-content">
+                    <span class="cta-tag">Let's Work Together</span>
+                    <h2 class="cta-title">Ready to Find Your <span class="gradient-text">Dream Property?</span></h2>
+                    <p class="cta-text">
+                        Schedule a free consultation with our expert agents and take the first step toward your real estate goals.
+                    </p>
+                    <div class="cta-actions">
+                        <a href="contact.html" class="btn btn-primary btn-large">
+                            Get Started <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="tel:+1234567890" class="btn btn-outline btn-large">
+                            <i class="fas fa-phone"></i> Call Us
+                        </a>
+                    </div>
+                </div>
+                <div class="cta-stats">
+                    <div class="cta-stat">
+                        <span class="cta-stat-number">1500+</span>
+                        <span class="cta-stat-label">Properties Sold</span>
+                    </div>
+                    <div class="cta-stat">
+                        <span class="cta-stat-number">98%</span>
+                        <span class="cta-stat-label">Happy Clients</span>
+                    </div>
+                    <div class="cta-stat">
+                        <span class="cta-stat-number">25+</span>
+                        <span class="cta-stat-label">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-icon">
+                            <i class="fas fa-building"></i>
+                        </span>
+                        <span class="logo-text">Prestige<span class="logo-accent">Properties</span></span>
+                    </a>
+                    <p class="footer-description">
+                        Premium real estate agency dedicated to helping you find the perfect property. Trusted by thousands of clients worldwide.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="agents.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Property Types</h4>
+                    <ul class="footer-links">
+                        <li><a href="properties.html">Luxury Homes</a></li>
+                        <li><a href="properties.html">Apartments</a></li>
+                        <li><a href="properties.html">Villas</a></li>
+                        <li><a href="properties.html">Commercial</a></li>
+                        <li><a href="properties.html">Land</a></li>
+                        <li><a href="properties.html">Investment Properties</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="footer-newsletter-text">
+                        Subscribe to our newsletter for the latest property listings and market insights.
+                    </p>
+                    <form class="footer-newsletter" id="newsletterForm">
+                        <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Prestige Properties. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== BACK TO TOP ==================== -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="js/script.js"></script>
+</body>
+</html>
